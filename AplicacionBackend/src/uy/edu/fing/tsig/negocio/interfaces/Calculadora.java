@@ -7,7 +7,6 @@ import javax.jws.WebService;
 //INTERFAZ QUE DEFINE LOS METODOS (SERVICIOS) A SER EXPUESTOS
 //************************************************************
 
-
 @WebService()
 public interface Calculadora {
 
