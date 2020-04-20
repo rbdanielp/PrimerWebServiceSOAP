@@ -7,9 +7,9 @@ import javax.jws.WebService;
 //INTERFAZ QUE DEFINE LOS METODOS (SERVICIOS) A SER EXPUESTOS
 //************************************************************
 
-@WebService()
+@WebService(serviceName = "CalculadoraWS")
 public interface Calculadora {
 
-	@WebMethod
+	@WebMethod(operationName = "operacion")
 	public double operacion(int opcion, int valor1, int valor2);
 }
