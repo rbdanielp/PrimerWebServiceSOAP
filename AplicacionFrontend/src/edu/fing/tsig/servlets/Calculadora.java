@@ -35,21 +35,29 @@ public class Calculadora extends HttpServlet {
 		Loguear.logTitulo("DO POST");
 		printParametros(request, response);
 		// doGet(request, response);
-		CalculadoraBean calBean = new CalculadoraBean();
-		calBean.setO(Integer.parseInt(request.getParameter("operacion")));
-		calBean.setV1(Integer.parseInt(request.getParameter("numero1")));
-		calBean.setV2(Integer.parseInt(request.getParameter("numero2")));
 
+		CalculadoraBean calBean = cargarBean(request, response);
 		String a = "" + Fachada.ProcesarOperacion(calBean);
 
 		response.getWriter().append("Resultado: ").append(a.toString());
 	}
 
 	protected void printParametros(HttpServletRequest request, HttpServletResponse response) {
+		Loguear.logTitulo("printParametros");
 		logger.info("operacion : " + request.getParameter("operacion"));
 		logger.info("numero1   : " + request.getParameter("numero1"));
 		logger.info("numero2   : " + request.getParameter("numero2"));
 
+	}
+
+	protected CalculadoraBean cargarBean(HttpServletRequest request, HttpServletResponse response) {
+		Loguear.logTitulo("cargarBean");
+		CalculadoraBean calBean = new CalculadoraBean();
+		calBean.setO(Integer.parseInt(request.getParameter("operacion")));
+		calBean.setV1(Integer.parseInt(request.getParameter("numero1")));
+		calBean.setV2(Integer.parseInt(request.getParameter("numero2")));
+
+		return calBean;
 	}
 
 }
