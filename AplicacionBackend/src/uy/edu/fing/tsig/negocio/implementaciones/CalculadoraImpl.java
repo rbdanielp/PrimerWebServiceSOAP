@@ -19,15 +19,19 @@ public class CalculadoraImpl implements Calculadora {
 
 		switch (opcion) {
 		case 1:
+			Loguear.logTitulo("CalculadoraImpl: SUMA ");
 			resultado = valor1 + valor2;
 			break;
 		case 2:
+			Loguear.logTitulo("CalculadoraImpl: RESTA ");
 			resultado = valor1 - valor2;
 			break;
 		case 3:
+			Loguear.logTitulo("CalculadoraImpl: MULTIPLICACION ");
 			resultado = valor1 * valor2;
 			break;
 		case 4:
+			Loguear.logTitulo("CalculadoraImpl: DIVISION ");
 			resultado = valor1 / valor2;
 			break;
 

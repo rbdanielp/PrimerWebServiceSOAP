@@ -11,7 +11,7 @@ public class Fachada {
 	private static final Logger logger = Logger.getLogger("Fachada.class");
 
 	public static double ProcesarOperacion(CalculadoraBean cb) {
-		Loguear.logTitulo("Fachada: ProcesarOperacion");
+		Loguear.logTitulo("Fachada: Procesar_Operacion");
 		
 		logger.info("ProcesarOperacion: Operacion : " + cb.getO() );
 		logger.info("ProcesarOperacion: Valor1    : " + cb.getV1());
