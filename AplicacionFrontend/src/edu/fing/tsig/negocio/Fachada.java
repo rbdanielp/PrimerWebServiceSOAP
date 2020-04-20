@@ -17,29 +17,11 @@ public class Fachada {
 		logger.info("ProcesarOperacion: Valor1    : " + cb.getV1());
 		logger.info("ProcesarOperacion: Valor2    : " + cb.getV2());
 		double resultado = 0;
-
-//		switch (cb.getO()) {
-//		case 1:
-//			cb.setR(cb.getV1() + cb.getV2());
-//			break;
-//		case 2:
-//			cb.setR(cb.getV1() - cb.getV2());
-//			break;
-//		case 3:
-//			cb.setR(cb.getV1() * cb.getV2());
-//			break;
-//		case 4:
-//			cb.setR(cb.getV1() / cb.getV2());
-//			break;
-//
-//		default:
-//			cb.setR(0);
-//			break;
-//		}
-//		logger.info("Resultado : " + cb.getR());
 		
 		try {
 			CalculadoraProxy wsSoapCalculadora = new CalculadoraProxy();
+			
+			//Invocacion al Web Service
 			resultado = wsSoapCalculadora.operacion(cb.getO(),cb.getV1(),cb.getV2());
 			logger.info("ProcesarOperacion: resultado    : " + resultado);
 		}catch(Exception e) {
