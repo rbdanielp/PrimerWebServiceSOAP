@@ -1,15 +1,15 @@
-package uy.edu.fing.tsig.negocio.implementaciones;
+package uy.edu.fing.tsig.negocio.implementaciones.backend;
 
 import javax.jws.WebService;
 
 import edu.fing.tsig.negocio.log.Loguear;
-import uy.edu.fing.tsig.negocio.interfaces.Calculadora;
+import uy.edu.fing.tsig.negocio.interfaces.backend.Calculadora;
 
 //***************************************************
 //IMPLEMENTA LOS METODOS DEFINIDOS EN  LA INTERFAZ
 //***************************************************
 
-@WebService(endpointInterface = "uy.edu.fing.tsig.negocio.interfaces.Calculadora")
+@WebService(endpointInterface = "uy.edu.fing.tsig.negocio.interfaces.backend.Calculadora")
 public class CalculadoraImpl implements Calculadora {
 
 	@Override

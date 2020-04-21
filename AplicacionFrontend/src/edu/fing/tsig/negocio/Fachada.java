@@ -4,7 +4,7 @@ import java.util.logging.Logger;
 
 import edu.fing.tsig.negocio.beans.CalculadoraBean;
 import edu.fing.tsig.negocio.log.Loguear;
-import uy.edu.fing.tsig.negocio.interfaces.CalculadoraProxy;
+import uy.edu.fing.tsig.negocio.interfaces.backend.CalculadoraProxy;
 
 
 public class Fachada {

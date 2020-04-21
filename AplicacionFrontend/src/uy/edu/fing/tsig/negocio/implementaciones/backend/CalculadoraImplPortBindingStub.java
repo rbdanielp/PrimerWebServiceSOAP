@@ -5,9 +5,9 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package uy.edu.fing.tsig.negocio.implementaciones;
+package uy.edu.fing.tsig.negocio.implementaciones.backend;
 
-public class CalculadoraImplPortBindingStub extends org.apache.axis.client.Stub implements uy.edu.fing.tsig.negocio.interfaces.Calculadora {
+public class CalculadoraImplPortBindingStub extends org.apache.axis.client.Stub implements uy.edu.fing.tsig.negocio.interfaces.backend.Calculadora {
     private java.util.Vector cachedSerClasses = new java.util.Vector();
     private java.util.Vector cachedSerQNames = new java.util.Vector();
     private java.util.Vector cachedSerFactories = new java.util.Vector();
@@ -103,7 +103,7 @@ public class CalculadoraImplPortBindingStub extends org.apache.axis.client.Stub 
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://interfaces.negocio.tsig.fing.edu.uy/", "operacion"));
+        _call.setOperationName(new javax.xml.namespace.QName("http://backend.interfaces.negocio.tsig.fing.edu.uy/", "operacion"));
 
         setRequestHeaders(_call);
         setAttachments(_call);

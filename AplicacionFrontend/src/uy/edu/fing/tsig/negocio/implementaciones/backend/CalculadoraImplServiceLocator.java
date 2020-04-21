@@ -5,9 +5,9 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package uy.edu.fing.tsig.negocio.implementaciones;
+package uy.edu.fing.tsig.negocio.implementaciones.backend;
 
-public class CalculadoraImplServiceLocator extends org.apache.axis.client.Service implements uy.edu.fing.tsig.negocio.implementaciones.CalculadoraImplService {
+public class CalculadoraImplServiceLocator extends org.apache.axis.client.Service implements uy.edu.fing.tsig.negocio.implementaciones.backend.CalculadoraImplService {
 
     public CalculadoraImplServiceLocator() {
     }
@@ -39,7 +39,7 @@ public class CalculadoraImplServiceLocator extends org.apache.axis.client.Servic
         CalculadoraImplPortWSDDServiceName = name;
     }
 
-    public uy.edu.fing.tsig.negocio.interfaces.Calculadora getCalculadoraImplPort() throws javax.xml.rpc.ServiceException {
+    public uy.edu.fing.tsig.negocio.interfaces.backend.Calculadora getCalculadoraImplPort() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
             endpoint = new java.net.URL(CalculadoraImplPort_address);
@@ -50,9 +50,9 @@ public class CalculadoraImplServiceLocator extends org.apache.axis.client.Servic
         return getCalculadoraImplPort(endpoint);
     }
 
-    public uy.edu.fing.tsig.negocio.interfaces.Calculadora getCalculadoraImplPort(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public uy.edu.fing.tsig.negocio.interfaces.backend.Calculadora getCalculadoraImplPort(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            uy.edu.fing.tsig.negocio.implementaciones.CalculadoraImplPortBindingStub _stub = new uy.edu.fing.tsig.negocio.implementaciones.CalculadoraImplPortBindingStub(portAddress, this);
+            uy.edu.fing.tsig.negocio.implementaciones.backend.CalculadoraImplPortBindingStub _stub = new uy.edu.fing.tsig.negocio.implementaciones.backend.CalculadoraImplPortBindingStub(portAddress, this);
             _stub.setPortName(getCalculadoraImplPortWSDDServiceName());
             return _stub;
         }
@@ -72,8 +72,8 @@ public class CalculadoraImplServiceLocator extends org.apache.axis.client.Servic
      */
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
-            if (uy.edu.fing.tsig.negocio.interfaces.Calculadora.class.isAssignableFrom(serviceEndpointInterface)) {
-                uy.edu.fing.tsig.negocio.implementaciones.CalculadoraImplPortBindingStub _stub = new uy.edu.fing.tsig.negocio.implementaciones.CalculadoraImplPortBindingStub(new java.net.URL(CalculadoraImplPort_address), this);
+            if (uy.edu.fing.tsig.negocio.interfaces.backend.Calculadora.class.isAssignableFrom(serviceEndpointInterface)) {
+                uy.edu.fing.tsig.negocio.implementaciones.backend.CalculadoraImplPortBindingStub _stub = new uy.edu.fing.tsig.negocio.implementaciones.backend.CalculadoraImplPortBindingStub(new java.net.URL(CalculadoraImplPort_address), this);
                 _stub.setPortName(getCalculadoraImplPortWSDDServiceName());
                 return _stub;
             }
@@ -105,7 +105,7 @@ public class CalculadoraImplServiceLocator extends org.apache.axis.client.Servic
     }
 
     public javax.xml.namespace.QName getServiceName() {
-        return new javax.xml.namespace.QName("http://implementaciones.negocio.tsig.fing.edu.uy/", "CalculadoraImplService");
+        return new javax.xml.namespace.QName("http://backend.implementaciones.negocio.tsig.fing.edu.uy/", "CalculadoraImplService");
     }
 
     private java.util.HashSet ports = null;
@@ -113,7 +113,7 @@ public class CalculadoraImplServiceLocator extends org.apache.axis.client.Servic
     public java.util.Iterator getPorts() {
         if (ports == null) {
             ports = new java.util.HashSet();
-            ports.add(new javax.xml.namespace.QName("http://implementaciones.negocio.tsig.fing.edu.uy/", "CalculadoraImplPort"));
+            ports.add(new javax.xml.namespace.QName("http://backend.implementaciones.negocio.tsig.fing.edu.uy/", "CalculadoraImplPort"));
         }
         return ports.iterator();
     }

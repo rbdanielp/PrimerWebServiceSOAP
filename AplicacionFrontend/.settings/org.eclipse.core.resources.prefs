@@ -1,5 +1,5 @@
 eclipse.preferences.version=1
-encoding//src/uy/edu/fing/tsig/negocio/implementaciones/CalculadoraImplPortBindingStub.java=UTF-8
-encoding//src/uy/edu/fing/tsig/negocio/implementaciones/CalculadoraImplService.java=UTF-8
-encoding//src/uy/edu/fing/tsig/negocio/implementaciones/CalculadoraImplServiceLocator.java=UTF-8
-encoding//src/uy/edu/fing/tsig/negocio/interfaces/Calculadora.java=UTF-8
+encoding//src/uy/edu/fing/tsig/negocio/implementaciones/backend/CalculadoraImplPortBindingStub.java=UTF-8
+encoding//src/uy/edu/fing/tsig/negocio/implementaciones/backend/CalculadoraImplService.java=UTF-8
+encoding//src/uy/edu/fing/tsig/negocio/implementaciones/backend/CalculadoraImplServiceLocator.java=UTF-8
+encoding//src/uy/edu/fing/tsig/negocio/interfaces/backend/Calculadora.java=UTF-8

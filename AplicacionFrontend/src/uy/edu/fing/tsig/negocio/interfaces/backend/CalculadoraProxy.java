@@ -1,8 +1,8 @@
-package uy.edu.fing.tsig.negocio.interfaces;
+package uy.edu.fing.tsig.negocio.interfaces.backend;
 
-public class CalculadoraProxy implements uy.edu.fing.tsig.negocio.interfaces.Calculadora {
+public class CalculadoraProxy implements uy.edu.fing.tsig.negocio.interfaces.backend.Calculadora {
   private String _endpoint = null;
-  private uy.edu.fing.tsig.negocio.interfaces.Calculadora calculadora = null;
+  private uy.edu.fing.tsig.negocio.interfaces.backend.Calculadora calculadora = null;
   
   public CalculadoraProxy() {
     _initCalculadoraProxy();
@@ -15,7 +15,7 @@ public class CalculadoraProxy implements uy.edu.fing.tsig.negocio.interfaces.Cal
   
   private void _initCalculadoraProxy() {
     try {
-      calculadora = (new uy.edu.fing.tsig.negocio.implementaciones.CalculadoraImplServiceLocator()).getCalculadoraImplPort();
+      calculadora = (new uy.edu.fing.tsig.negocio.implementaciones.backend.CalculadoraImplServiceLocator()).getCalculadoraImplPort();
       if (calculadora != null) {
         if (_endpoint != null)
           ((javax.xml.rpc.Stub)calculadora)._setProperty("javax.xml.rpc.service.endpoint.address", _endpoint);
@@ -38,7 +38,7 @@ public class CalculadoraProxy implements uy.edu.fing.tsig.negocio.interfaces.Cal
     
   }
   
-  public uy.edu.fing.tsig.negocio.interfaces.Calculadora getCalculadora() {
+  public uy.edu.fing.tsig.negocio.interfaces.backend.Calculadora getCalculadora() {
     if (calculadora == null)
       _initCalculadoraProxy();
     return calculadora;

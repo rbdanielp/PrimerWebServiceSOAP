@@ -1,9 +1,9 @@
-package uy.edu.fing.tsig.negocio.webservices;
+package uy.edu.fing.tsig.negocio.webservices.backend;
 
 import javax.xml.ws.Endpoint;
 
 import edu.fing.tsig.negocio.log.Loguear;
-import uy.edu.fing.tsig.negocio.implementaciones.CalculadoraImpl;
+import uy.edu.fing.tsig.negocio.implementaciones.backend.CalculadoraImpl;
 
 //******************************************************************************
 //		CREA EL WSDL; QUE ES EL CONTRATO DONDE SE EXPONEN LOS SERVICIOS CREADOS 
